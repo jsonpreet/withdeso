@@ -40,7 +40,7 @@ const Home = () => {
             <h3 className='font-semibold ml-2 text-[#daedff]'>Embed</h3>
           </div>
         </div>
-        <div className='content-section flex flex-col items-center justify-center max-w-7xl max-auto  py-5'>
+        <div className='content-section max-w-7xl max-auto  py-5'>
           <div className='w-full columns-3'>
             {posts?.length > 0 && posts.map((post) => {
               return (

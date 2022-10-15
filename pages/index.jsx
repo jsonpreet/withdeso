@@ -19,7 +19,7 @@ const Home = () => {
 
   const getPosts = async () => {
     const request = {
-      "ResponseLimit": 1,
+      "ResponseLimit": 19,
     };
     const { data } =  await axios.post(`https://node.deso.org/api/v0/get-hot-feed`,request)
     if (data && data.HotFeedPage) {

@@ -50,7 +50,7 @@ const Home = () => {
                     inPageLinks
                     log={false}
                     onResized={onResized}
-                    src={`http://embed.withdeso.com/embed/${post.PostHashHex}`}
+                    src={`https://embed.withdeso.com/embed/${post.PostHashHex}`}
                     style={{ minWidth: '400px' }}
                   />
                 </div>

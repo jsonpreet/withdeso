@@ -4,10 +4,11 @@ import Image from 'next/image'
  import { toast, ToastContainer } from 'react-toastify';
 import IframeResizer from 'iframe-resizer-react'
 import axios from 'axios';
-
+import { Loader } from '../components/Loader';
 
 const Home = () => {
   const [posts, setPosts] = React.useState('')
+  const [loading, setLoading] = React.useState(true)
 
   React.useEffect(() => {
     getPosts();
@@ -23,6 +24,7 @@ const Home = () => {
     };
     const { data } =  await axios.post(`https://node.deso.org/api/v0/get-hot-feed`,request)
     if (data && data.HotFeedPage) {
+      setLoading(false)
       const posts = data.HotFeedPage;
       setPosts(posts)
     }
@@ -46,6 +48,7 @@ const Home = () => {
       </div>
       <div className='flex flex-col w-full items-center'>
         <div className='content-section max-w-7xl mx-auto py-5'>
+          {loading && <Loader className='h-10 w-10 text-[#5634ee]' />}
           <div className='w-full columns-3'>
             {posts?.length > 0 && posts.map((post) => {
               return (

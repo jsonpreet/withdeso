@@ -51,7 +51,7 @@ const Home = () => {
                     log={false}
                     onResized={onResized}
                     src={`https://embed.withdeso.com/embed/${post.PostHashHex}`}
-                    style={{ minWidth: '400px' }}
+                    style={{ minWidth: '416px' }}
                   />
                 </div>
               )

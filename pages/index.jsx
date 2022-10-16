@@ -15,7 +15,7 @@ const Home = () => {
   }, [])
 
   const onResized = (data) => {
-    console.log(data)
+    //console.log(data)
   }
 
   const getPosts = async () => {
@@ -33,7 +33,7 @@ const Home = () => {
   return (
     <>
       <div className='main-section bg-[#031128] bg-gradient-to-br from-[#031128] to-[#0000ff33] w-full flex-col z-10 relative items-start justify-center'>
-        <div className='header-section flex flex-row items-start justify-between w-full px-20 py-5'>
+        <div className='header-section flex flex-row items-start justify-between w-full lg:px-20 px-4 py-5'>
           <div className='flex flex-row items-center'>
             <a href='https://deso.com' className='flex flex-row items-center justify-center'>
               <Image src="/logo-deso-white.svg" alt="Deso Logo" width={100} height={35} />
@@ -47,9 +47,9 @@ const Home = () => {
         </div>          
       </div>
       <div className='flex flex-col w-full items-center'>
-        <div className='content-section max-w-7xl mx-auto py-5'>
-          {loading && <Loader className='h-10 w-10 text-[#5634ee]' />}
-          <div className='w-full columns-3'>
+        <div className='content-section lg:max-w-7xl lg:px-0 px-4 w-full mx-auto py-5'>
+          {loading && <div className='flex-1 flex items-center justify-center w-full'><Loader className='h-10 w-10 text-[#5634ee]' /></div>}
+          <div className='w-full columns-1 md:columns-2 lg:columns-3'>
             {posts?.length > 0 && posts.map((post) => {
               return (
                 <div key={post.PostHashHex} className='w-full relative mb-4'>
@@ -59,7 +59,8 @@ const Home = () => {
                     log={false}
                     onResized={onResized}
                     src={`https://embed.withdeso.com/embed/${post.PostHashHex}`}
-                    style={{ minWidth: '416px' }}
+                    width="100%"
+                    checkOrigin={false}
                   />
                 </div>
               )

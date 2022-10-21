@@ -58,7 +58,7 @@ const Home = () => {
                     inPageLinks
                     log={false}
                     onResized={onResized}
-                    src={`https://embed.withdeso.com/embed/${post.PostHashHex}`}
+                    src={`https://embed.withdeso.com/embed/posts/${post.PostHashHex}`}
                     width="100%"
                     checkOrigin={false}
                   />

@@ -42,6 +42,7 @@ const Home = () => {
             <h3 className='font-semibold ml-2 text-[#daedff]'>Embed</h3>
           </div>
           <div className='flex flex-row items-center justify-end'>
+            <a href='https://shot.withdeso.com' rel='noopener noreferrer nofollow' className='mr-4 bg-[#ffda59] text-[#6d4800] hover:bg-[#ffcf26] font-bold py-2 px-6 rounded-full'>Get Shot</a>
             <a href='https://embed.withdeso.com' rel='noopener noreferrer nofollow' className='bg-[#ffda59] text-[#6d4800] hover:bg-[#ffcf26] font-bold py-2 px-6 rounded-full'>Get Embed</a>
           </div>
         </div>          

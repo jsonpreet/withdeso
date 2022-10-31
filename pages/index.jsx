@@ -33,8 +33,8 @@ const Home = () => {
   return (
     <>
       <div className='main-section bg-[#031128] bg-gradient-to-br from-[#031128] to-[#0000ff33] w-full flex-col z-10 relative items-start justify-center'>
-        <div className='header-section flex flex-row items-start justify-between w-full lg:px-20 px-4 py-5'>
-          <div className='flex flex-row items-center'>
+        <div className='header-section flex flex-col md:flex-row items-start justify-between w-full lg:px-20 px-4 py-5'>
+          <div className='flex flex-row items-center mb-4 md:mb-0'>
             <a href='https://deso.com' className='flex flex-row items-center justify-center'>
               <Image src="/logo-deso-white.svg" alt="Deso Logo" width={100} height={35} />
             </a>
